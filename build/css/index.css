@@ -1,0 +1,37 @@
+.main-container {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  background-image: url('assets/main-bg.png');
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 450px;
+  margin-bottom: 60px;
+}
+.main-container .title {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  width: 1050px;
+}
+.main-container .description {
+  font-weight: normal;
+  color: grey;
+  font-size: 20px;
+}
+.main-container .partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main-container .partners img {
+  max-width: 150px;
+  max-height: 40px;
+  background: transparent;
+  padding: 45px;
+  opacity: 0.5;
+}

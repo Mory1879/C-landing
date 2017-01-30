@@ -1,0 +1,91 @@
+.wrapper {
+  background-color: #f7f3f0;
+}
+.wrapper .header {
+  margin-bottom: 0;
+}
+.quiz-container {
+  font-family: 'Roboto', sans-serif;
+  height: 640px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.quiz-container h2 {
+  margin-top: 0;
+}
+.quiz-container .title {
+  font-weight: 700;
+  font-size: 40px;
+}
+.quiz-container .description {
+  font-family: 'Open Sans', sans-serif;
+  height: 50px;
+  width: 435px;
+  align-self: center;
+  color: grey;
+  margin-bottom: 40px;
+}
+.quiz-container .cards {
+  position: relative;
+  align-self: center;
+  height: 400px;
+}
+.quiz-container .cards .quiz-card {
+  position: absolute;
+  transform: translateX(-50%);
+  height: 360px;
+  width: 550px;
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 4px 9px #dddfe0;
+  -moz-box-shadow: 0px 4px 9px #dddfe0;
+  box-shadow: 0px 4px 9px #dddfe0;
+  font-family: Arial;
+  color: #000000;
+  font-size: 18px;
+  background: #ffffff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.quiz-container .cards .quiz-card .counter {
+  height: 35px;
+  width: 90px;
+  border-radius: 0 0 90px 90px;
+  background: #ff441a;
+  padding-top: 10px;
+  color: white;
+  margin-bottom: 30px;
+}
+.quiz-container .cards .quiz-card .question {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.quiz-container .cards .quiz-card .quiz-options {
+  width: 450px;
+  height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.quiz-container .cards .quiz-card .quiz-options .quiz-option {
+  text-decoration: none;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  margin: 4px;
+  height: 80px;
+  line-height: 80px;
+  width: 200px;
+  border-radius: 9px;
+  background-color: #f0f0f0;
+}

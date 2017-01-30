@@ -1,0 +1,18 @@
+include ./meta.pug
+.wrapper
+	include ./header.pug
+	.quiz-container
+		h2.title Робот Right
+		.description Определю инвестиционную стратегию и соберу портфель ценных бумаг за 1 минуту
+		.cards
+			.quiz-card(style="z-index: 6;")
+				.counter 1 из 7
+				.question Ваш возраст
+				.quiz-options
+					a.quiz-option(href='./3.html') До 25
+					a.quiz-option(href='./3.html') 25-35
+					a.quiz-option(href='./3.html') 36-49
+					a.quiz-option(href='./3.html') Более 50
+			.quiz-card(style="top: 10px;width: 500px;z-index: 5;")
+			.quiz-card(style="top: 20px;width: 450px;z-index: 4;")
+	include ./footer.pug

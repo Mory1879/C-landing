@@ -9,7 +9,7 @@ const PROJECT = 'build',
     CSS_DIR = 'build/css';
 
 gulp.task('pug', function(){
-    gulp.src('*.pug')
+    gulp.src('templates/*.pug')
         .pipe(pug({pretty: true}))
         .pipe(gulp.dest(PROJECT))
         .pipe(browserSync.reload({stream: true}))

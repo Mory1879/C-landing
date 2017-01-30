@@ -15,43 +15,6 @@
 .header .sign-buttons {
   padding-top: 20px;
 }
-.container {
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background: white;
-  background-image: url('assets/main-bg.png');
-  background-size: 100% 70%;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  height: 450px;
-  margin-bottom: 60px;
-}
-.container .title {
-  font-weight: 700;
-  font-size: 40px;
-  text-align: center;
-  width: 1050px;
-}
-.container .description {
-  font-weight: normal;
-  color: grey;
-  font-size: 20px;
-}
-.container .partners {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.container .partners img {
-  max-width: 150px;
-  max-height: 40px;
-  background: transparent;
-  padding: 45px;
-  opacity: 0.5;
-}
 .footer {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -60,9 +23,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 20px;
 }
 .footer .licences {
   text-align: center;
+  padding-left: 90px;
 }
 .footer .social i {
   padding: 15px;
