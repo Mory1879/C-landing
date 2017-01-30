@@ -1,0 +1,78 @@
+.header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  margin-bottom: 30px;
+}
+.header .logo {
+  background-image: url('assets/logo.svg');
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 90px;
+}
+.header .sign-buttons {
+  padding-top: 20px;
+}
+.container {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: white;
+  background-image: url('assets/main-bg.png');
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  height: 450px;
+  margin-bottom: 60px;
+}
+.container .title {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  width: 1050px;
+}
+.container .description {
+  font-weight: normal;
+  color: grey;
+  font-size: 20px;
+}
+.container .partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container .partners img {
+  max-width: 150px;
+  max-height: 40px;
+  background: transparent;
+  padding: 45px;
+  opacity: 0.5;
+}
+.footer {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer .licences {
+  text-align: center;
+}
+.footer .social i {
+  padding: 15px;
+}
+.footer .social .fa-vk {
+  color: #49769f;
+}
+.footer .social .fa-facebook {
+  color: #375996;
+}
+.footer .social .fa-twitter {
+  color: #49abeb;
+}
