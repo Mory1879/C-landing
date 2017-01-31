@@ -9,3 +9,27 @@
 				i(class="fa fa-vk fa-lg")
 				i(class="fa fa-facebook fa-lg")
 				i(class="fa fa-twitter fa-lg")
+
+script.
+	var modal = document.getElementById('myModal');
+	var btn = document.getElementById("myBtn");
+	var reg = document.getElementById("regBtn");
+	var span = document.getElementsByClassName("close")[0];
+	
+	if (btn) {
+		btn.onclick = function() {
+			modal.style.display = "block";
+		}
+	}
+
+	reg.onclick = function() {
+		modal.style.display = "block";
+	}
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}

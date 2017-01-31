@@ -24,7 +24,12 @@ gulp.task('less', function(){
         .pipe(browserSync.reload({stream: true}))
 })
 
-gulp.task('browser-sync', ['less', 'pug'],function(){
+gulp.task('copy', function() {
+    return gulp.src(LESS_DIR + '/assets/**/*.*')
+        .pipe(gulp.dest(CSS_DIR + "/assets"))
+})
+
+gulp.task('browser-sync', ['less', 'pug', 'copy'],function(){
     browserSync({
         server: {baseDir: PROJECT},
         notify: true

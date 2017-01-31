@@ -1,0 +1,95 @@
+include ./meta.pug
+.wrapper
+	include ./header.pug
+	.done-container
+		h2.title Ваш портфель сформирован!
+		.description Зарегестрируйтесь чтобы открыть брокерский счет и начать инвестировать
+		.graph
+			ul
+				li ПАО "Дикси групп" - 5% 
+					.circle(style="background: #ffce00;")
+				li Денежные средства - 15%
+					.circle(style="background: #4bdb00;")
+				li ПАО "Дикси групп" - 5% 
+					.circle(style="background: #0098fe;")
+				li ПАО "Лукойл" - 5% 
+					.circle(style="background: #cc2dea;")
+				li ПАО "Лукойл" - 5%
+					.circle(style="background: #6e30d0;") 
+			canvas#chart(width='270', height='270', style='background-color:transparent')
+			ul
+				li ПАО "Синергия" - 24% 
+					.circle(style="background: #ff441a;")
+				li ПАО "Вторресурсы" - 10%
+					.circle(style="background: #fd6012;")
+				li ПАО "Вторресурсы" - 10% 
+					.circle(style="background: #ff960a;")
+				li Денежные средства - 15% 
+					.circle(style="background: #ffce00;")
+		a#myBtn.btn-mid-begin Регистрация
+	//- include ./register.pug
+	include ./footer.pug
+
+script.
+	//- var modal = document.getElementById('myModal');
+	//- var btn = document.getElementById("myBtn");
+	//- var reg = document.getElementById("regBtn");
+	//- var span = document.getElementsByClassName("close")[0];
+	
+	//- btn.onclick = function() {
+	//-     modal.style.display = "block";
+	//- }
+	//- reg.onclick = function() {
+	//-     modal.style.display = "block";
+	//- }
+	//- span.onclick = function() {
+	//-     modal.style.display = "none";
+	//- }
+	//- window.onclick = function(event) {
+	//-     if (event.target == modal) {
+	//-         modal.style.display = "none";
+	//-     }
+	//- }
+
+
+	var canvas  = document.getElementById("chart");
+	var chart = canvas.getContext("2d");
+	function drawdountChart(canvas)
+	{
+		this.x , this.y , this.radius , this.lineWidth , this.strockStyle , this.from , this.to = null;
+		this.set = function( x, y, radius, from, to, lineWidth, strockStyle) {
+			this.x = x;
+			this.y = y;
+			this.radius = radius;
+			this.from=from;
+			this.to= to;
+			this.lineWidth = lineWidth;
+			this.strockStyle = strockStyle;
+		}
+		this.draw = function(data) {
+			canvas.beginPath();
+			canvas.lineWidth = this.lineWidth;
+			canvas.strokeStyle = this.strockStyle;
+			canvas.arc(this.x , this.y , this.radius , this.from , this.to);
+			canvas.stroke();
+			var numberOfParts = data.numberOfParts;
+			var parts = data.parts.pt;
+			var colors = data.colors.cs;
+			var df = 0;
+			for(var i = 0; i<numberOfParts; i++) {
+				canvas.beginPath();
+				canvas.strokeStyle = colors[i];
+				canvas.arc(this.x, this.y, this.radius, df, df + (Math.PI * 2) * (parts[i] / 100));
+				canvas.stroke();
+				df += (Math.PI * 2) * (parts[i] / 100);
+			}
+		}
+	}
+	var data = {
+		numberOfParts: 9,
+		parts:{"pt": [5,15,5,50,5,4,10,1,5]},//percentage of each parts
+		colors:{"cs": ["#ffce00", "#4bdb00", "#0098fe", "#cc2dea", "#6e30d0", "#ff441a", "#fd6012", "#ff960a", "#ffce00"]}//color of each part
+	};
+	var drawDount = new drawdountChart(chart);
+	drawDount.set(150, 150, 100, 0, Math.PI*2, 30, "#fff");
+	drawDount.draw(data);

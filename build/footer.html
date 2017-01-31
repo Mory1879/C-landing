@@ -4,3 +4,27 @@
   <div class="licences">Свидетельство о государственной регистрации программы для ЭВМ №2015660286<br/>Свидетельство о государственной регистрации базы данных №2015621406</div>
   <div class="social"><i class="fa fa-vk fa-lg"></i><i class="fa fa-facebook fa-lg"></i><i class="fa fa-twitter fa-lg"></i></div>
 </div>
+<script>
+  var modal = document.getElementById('myModal');
+  var btn = document.getElementById("myBtn");
+  var reg = document.getElementById("regBtn");
+  var span = document.getElementsByClassName("close")[0];
+  
+  if (btn) {
+  	btn.onclick = function() {
+  		modal.style.display = "block";
+  	}
+  }
+  
+  reg.onclick = function() {
+  	modal.style.display = "block";
+  }
+  span.onclick = function() {
+  	modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+  	if (event.target == modal) {
+  		modal.style.display = "none";
+  	}
+  }
+</script>

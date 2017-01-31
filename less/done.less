@@ -1,0 +1,61 @@
+@import (reference) "quiz";
+
+
+.btn-mid-begin{
+    margin: 50px 0px;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 15px;
+	height: 15px; 
+	margin: 0px 10px;
+}
+
+.done-container {
+	.quiz-container;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;;
+
+	.graph {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		
+		ul {
+			list-style:none;
+
+			li {
+				display: flex;
+				align-items: center;
+				padding: 10px 0px;
+			}
+
+			&:first-child {
+				text-align: right;
+
+				li {
+				    justify-content: flex-end;
+				}
+			}
+
+			&:last-child {
+				text-align: left;	
+
+				li {
+				    justify-content: flex-end;
+    				flex-direction: row-reverse;
+				}
+			}
+		}
+
+		#chart {
+			align-self: center;
+			width: 270px;
+			height: 270px;
+		}
+	}
+}
